@@ -30,7 +30,7 @@ The Spam Protection Module (http://silverstripe.org/spam-protection-module) prov
 so first you need to install that module.
 
 * Add 
-```js
+```
 {
     require: {
 	"silverstripe/spamprotection": "1.0.x-dev"
@@ -39,7 +39,7 @@ so first you need to install that module.
 ```
 to your project composer.json 
 * or execute the command 
-```bash require "silverstripe/spamprotection": "1.0.x-dev"```
+```require "silverstripe/spamprotection": "1.0.x-dev"```
 * after both ways you have to execute composer update
 
 ## Setting up InvisibleSpamProtection
