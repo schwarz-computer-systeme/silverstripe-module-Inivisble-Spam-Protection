@@ -1,15 +1,16 @@
 {
-"name": "schwarz-computer-systeme/silverstripe-module-Inivisble-Spam-Protection",
+    "name": "marijnkampf/InvisibleSpamProtection",
     "type": "application",
     "description": "protecting formulars from spam",
-    "keywords": ["spam","protection"],
+    "keywords": ["spam", "protection"],
     "authors": [
         {
             "name": "Kevin May",
             "email": "km@schwarz.de"
         }
     ],
-	"require": {
-        "php": ">=5.3.0"
+    "require": {
+        "php": ">=5.3.0",
+        "silverstripe/spamprotection": "1.0.x-dev"
     }
 }
