@@ -26,24 +26,47 @@ Includes an EditableInvisibleSpamField to integrate with the UserForms module.
 
 ## Install Spam Protection Module
 
-The Spam Protection Module (http://silverstripe.org/spam-protection-module) provides the basic interface for managing the spam protection
-so first you need to install that module.
+The Spam Protection Module (http://silverstripe.org/spam-protection-module) provides the basic interface for managing the spam protection.
+If your are not using composer to manage your dependencies , you have to install this module manually. 
 
-* Add 
-```
-{
-    require: {
-	"silverstripe/spamprotection": "1.0.x-dev"
-	}
-}
-```
-to your project composer.json 
-* or execute the command 
-```require "silverstripe/spamprotection": "1.0.x-dev"```
-* after both ways you have to execute composer update
 
 ## Setting up InvisibleSpamProtection
 
- * InvisibleSpamProtection should be in your sites root folder.
- * Enable anti spam in mysite/_config.php by adding line
-   SpamProtectorManager::set_spam_protector('InvisibleSpamProtector');
+### With composer (recomended)
+
+Add this to your composer.json:
+
+```js
+{
+    "require": {
+        "marijnkampf/InvisibleSpamProtection": "dev-master"
+    }
+}
+```
+
+or execute the following command
+
+```php composer.phar require "marijnkampf/InvisibleSpamProtection": "dev-master"```
+
+After that execute
+
+```php composer.phar update "marijnkampf/InvisibleSpamProtection"```
+
+to install the module. If you have set your minimum-stability to stable, you may need to install the spam-protection-module explicitly:
+
+```
+php composer.phar require "silverstripe/spamprotection": "1.0.x-dev"
+php composer.phar update  
+```
+
+
+### without composer (traditional way)
+
+ Download the module and extract it, into a folder which should be named InvisibleSpamProtection.
+ 
+## Enable the Module ##
+Enable anti spam in mysite/_config.php by adding line 
+
+```
+SpamProtectorManager::set_spam_protector('InvisibleSpamProtector');
+```
