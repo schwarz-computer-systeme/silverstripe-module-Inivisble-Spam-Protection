@@ -1,6 +1,6 @@
 {
     "name": "marijnkampf/InvisibleSpamProtection",
-    "type": "application",
+    "type": "silverstripe-module",
     "description": "protecting formulars from spam",
     "keywords": ["spam", "protection"],
     "authors": [
